@@ -15,6 +15,7 @@ const chess = new Chess();
 export const gameSubject = new BehaviorSubject()
 
 export function initGame() {
+    localStorage.clear();
     const savedGame = localStorage.getItem('savedGame');
     if (savedGame) {
         chess.load(savedGame)
